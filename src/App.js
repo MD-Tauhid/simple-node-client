@@ -19,7 +19,7 @@ function App() {
     fetch('http://localhost:5000/users', {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json'
+        'content-type': 'application/json'
       },
       body: JSON.stringify(user)
     })
@@ -45,7 +45,7 @@ function App() {
       </form>
       <div>
         {
-          users.map(user => <p key={user.id}> Name: {user.name}  email: {user.email}</p>)
+          users.map(user => <p key={user._id}> Name: {user.name}  email: {user.email}</p>)
         }
       </div>
     </div>
